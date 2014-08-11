@@ -1,0 +1,5 @@
+AltitudeFree
+
+Version 1.0.0.0 (08/11/2014)
+
+- Initial release.

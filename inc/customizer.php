@@ -23,45 +23,6 @@ function altitude_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-	// Social Icons
-	$wp_customize->add_section( 'altitude_social_options', array(
-		'title'    => __( 'Social Options', 'altitude' ),
-		'priority' => 35
-	) );
-
-	$wp_customize->add_setting( 'altitude_twitter', array(
-		'default'   => '',
-	) );
-
-	$wp_customize->add_control( 'altitude_twitter', array(
-		'label'    => __( 'Twitter URL', 'altitude' ),
-		'section'  => 'altitude_social_options',
-		'type'     => 'text',
-		'settings' => 'altitude_twitter'
-	) );
-
-	$wp_customize->add_setting( 'altitude_facebook', array(
-		'default'   => '',
-	) );
-
-	$wp_customize->add_control( 'altitude_facebook', array(
-		'label'    => __( 'Facebook URL', 'altitude' ),
-		'section'  => 'altitude_social_options',
-		'type'     => 'text',
-		'settings' => 'altitude_facebook'
-	) );
-
-	$wp_customize->add_setting( 'altitude_google_plus', array(
-		'default'   => '',
-	) );
-
-	$wp_customize->add_control( 'altitude_google_plus', array(
-		'label'    => __( 'Google Plus URL', 'altitude' ),
-		'section'  => 'altitude_social_options',
-		'type'     => 'text',
-		'settings' => 'altitude_google_plus'
-	) );
-
 	// Sidebar Location
 	$wp_customize->add_setting( 'altitude_sidebar', array(
 		'default'   => 'right',

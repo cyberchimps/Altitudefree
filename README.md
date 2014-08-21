@@ -1,7 +1,7 @@
-Altitude Free responsive Wordpress theme
+Altitudelite responsive Wordpress theme
 ====================================
 
-- Altitude Free
+- Altitudelite
 - by CyberChimps http://cyberchimps.com
 - Licensed under GNU General Public License v3.0 - http://www.gnu.org/licenses/gpl-3.0.html
 

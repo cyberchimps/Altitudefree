@@ -203,7 +203,7 @@ function get_altitude_sidebar( $loc ) {
  */
 function altitude_register_styles() {
 	wp_register_style( 'altitude-sourcesanspro', altitude_google_font_url(), array(), null );
-	wp_register_style( 'altitude-fontawesome', '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
+	wp_register_style( 'altitude-fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
 }
 
 add_action( 'init', 'altitude_register_styles' );

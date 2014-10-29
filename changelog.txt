@@ -1,5 +1,13 @@
 Altitude Lite
 
+Version 1.0.0.1 (10/29/2014)
+
+- Removed isotope.js as it's not GPL compatible.
+- Added Font Awesome locally instead of using CDN.
+- Removed script from header.php.
+- Fixed undefined variable notice in 404 page.
+- Removed link from admin footer.
+
 Version 1.0.0.0 (08/20/2014)
 
 - Initial release.

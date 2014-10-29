@@ -36,4 +36,4 @@ function cyberchimps_admin_footer_text () {
 							'<a href="http://cyberchimps.com/forum/" title="CyberChimps Help" target="_blank">' . __( 'the CyberChimps Pro forum', 'altitude' ) . '</a>' );
 	echo '<div id="cyberchimps_admin_footer"><span class="cyberchimps-logo"></span>' . $cyberchimps . '</div>';
 }
-add_filter( 'admin_footer_text', 'cyberchimps_admin_footer_text' );
+//add_filter( 'admin_footer_text', 'cyberchimps_admin_footer_text' );

@@ -38,11 +38,11 @@ get_header(); ?>
 						<div id="error_widgets" class="row">
 
 							<div class="xs-col-12 s-col-3">
-								<?php the_widget( 'WP_Widget_Tag_Cloud', '', $args ); ?>
+								<?php the_widget( 'WP_Widget_Tag_Cloud', ''); ?>
 							</div>
 
 							<div class="xs-col-12 s-col-3">
-								<?php the_widget( 'WP_Widget_Recent_Posts', '', $args ); ?>
+								<?php the_widget( 'WP_Widget_Recent_Posts', '' ); ?>
 							</div>
 
 							<div class="xs-col-12 s-col-3">
@@ -65,7 +65,7 @@ get_header(); ?>
 							</div>
 							<div class="xs-col-12 s-col-3">
 								<?php
-								the_widget( 'WP_Widget_Archives', 'dropdown=1', $args );
+								the_widget( 'WP_Widget_Archives', 'dropdown=1' );
 								?>
 							</div>
 						</div>

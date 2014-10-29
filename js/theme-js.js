@@ -40,20 +40,4 @@
         });
     }
 
-	// Homepage Isotope
-	$( window ).resize(function() {
-		if ( window.innerWidth > 767 ) {
-			$('.home-posts').isotope({
-				itemSelector : '.isotope-item',
-				masonry : {
-					columnWidth: '.s-col-3'
-				}
-			});
-
-			// Top menu height fix
-			jMenuHeight = $('#site_navigation .menu').height();
-			$('#main_navigation_container .row').css({'height': jMenuHeight-10});
-		}
-	});
-
 })(jQuery);

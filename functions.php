@@ -144,8 +144,6 @@ function altitude_scripts() {
 
 	wp_enqueue_script( 'altitude-stellar', $template_directory_uri . '/js/jquery.stellar.min.js', array( 'jquery' ), '20130825', true );
 
-	wp_enqueue_script( 'altitude-isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array(), '20140630', true );
-
 	wp_enqueue_script( 'altitude-theme', $template_directory_uri . '/js/theme-js.js', array(
 			'jquery',
 			'altitude-stellar'

@@ -201,12 +201,12 @@ function altitude_get_sidebar( $loc ) {
 /**
  * Enqueue Styles
  */
-function altitude_load_styles( $hook_suffix ) {
+function altitude_load_styles() {
 	wp_enqueue_style( 'altitude-sourcesanspro', altitude_google_font_url(), array(), null );
 	wp_enqueue_style( 'altitude-fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
 }
 
-add_action( 'wp_print_styles', 'altitude_load_styles' );
+add_action( 'wp_enqueue_scripts', 'altitude_load_styles' );
 
 /**
  * Enqueue Admin Scripts for custom headers

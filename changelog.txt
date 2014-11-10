@@ -1,7 +1,12 @@
 Altitude Lite
 
-Version 1.0.0.1 (10/29/2014)
+Version 1.0.0.2 (11/10/2014)
+- Removed template-blog.php as it is not required.
+- Added esc_html() to altitude_home_button_text.
+- Replaced get_altitude_sidebar() with altitude_get_sidebar().
+- Tweaked the style enqueuing.
 
+Version 1.0.0.1 (10/29/2014)
 - Removed isotope.js as it's not GPL compatible.
 - Added Font Awesome locally instead of using CDN.
 - Removed script from header.php.

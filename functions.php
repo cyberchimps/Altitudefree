@@ -189,7 +189,7 @@ require $template_directory . '/inc/admin.php';
  *
  * @param $loc string - left or right
  */
-function get_altitude_sidebar( $loc ) {
+function altitude_get_sidebar( $loc ) {
 	$location = get_theme_mod( 'altitude_sidebar' );
 	$location = $location ? $location : 'right';
 

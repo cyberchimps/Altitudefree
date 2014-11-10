@@ -18,7 +18,7 @@ get_header(); ?>
 <div id="primary" class="content-area container">
 	<main id="main" class="site-main row" role="main">
 
-		<?php get_altitude_sidebar( 'left' ); ?>
+		<?php altitude_get_sidebar( 'left' ); ?>
 
 		<div class="s-col-9">
 			<div class="single-content">
@@ -39,7 +39,7 @@ get_header(); ?>
 			</div>
 		</div><!-- col -->
 
-		<?php get_altitude_sidebar( 'right' ); ?>
+		<?php altitude_get_sidebar( 'right' ); ?>
 
 	</main>
 </div><!-- #primary -->

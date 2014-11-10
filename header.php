@@ -119,8 +119,8 @@
 					</div>
 					<?php if ( is_front_page() ) : ?>
 						<div class="button">
-							<?php if ( get_theme_mod( 'altitude_home_button_text' ) ) : ?>
-								<a href="<?php echo esc_url( get_theme_mod( 'altitude_home_button_link' ) ); ?>"><?php echo get_theme_mod( 'altitude_home_button_text' ); ?></a>
+							<?php if ( esc_html( get_theme_mod( 'altitude_home_button_text' ) ) ) : ?>
+								<a href="<?php echo esc_url( get_theme_mod( 'altitude_home_button_link' ) ); ?>"><?php echo esc_html( get_theme_mod( 'altitude_home_button_text' ) ); ?></a>
 							<?php endif; ?>
 						</div>
 					<?php endif; ?>

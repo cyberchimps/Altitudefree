@@ -124,10 +124,12 @@ add_action( 'customize_preview_init', 'altitude_customize_preview_js' );
 
 // Sanitization for sidebar option.
 function altitude_sanitize_sidebar( $input ){
-	if( $input )
+	if ( in_array ( $input, array( 'right', 'left' ), true ) ) {
 		return $input;
-	else
+	}
+	else {
 		return 'right';
+	}
 }
 
 // Sanitization for logo option.

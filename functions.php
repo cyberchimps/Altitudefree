@@ -180,11 +180,6 @@ require $template_directory . '/inc/extras.php';
 require $template_directory . '/inc/jetpack.php';
 
 /**
- * Admin code
- */
-require $template_directory . '/inc/admin.php';
-
-/**
  * function decides where to put the sidebar. Left or right of content
  *
  * @param $loc string - left or right

@@ -82,11 +82,6 @@ if ( ! function_exists( 'altitude_setup' ) ) : /**
 		add_image_size( 'altitude-post', '848', '205', true );
 
 		/**
-		 * Add stylesheet to post/page edit
-		 */
-		add_editor_style( 'layouts/editor-style.css' );
-
-		/**
 		 * Enable support for HTML5 markup.
 		 */
 		add_theme_support( 'html5', array(

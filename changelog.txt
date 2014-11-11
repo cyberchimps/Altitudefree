@@ -1,5 +1,8 @@
 Altitude Lite
 
+Version 1.0.0.4 (11/11/2014)
+- Tweaked style for default/fallback menu.
+
 Version 1.0.0.3 (11/11/2014)
 - Removed admin.php and all related to it.
 - Removed custom comment markup altitude_comment().

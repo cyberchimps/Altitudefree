@@ -1,5 +1,11 @@
 Altitude Lite
 
+Version 1.0.0.3 (11/11/2014)
+- Removed admin.php and all related to it.
+- Removed custom comment markup altitude_comment().
+- Removed editor-style.css.
+- Tweaked altitude_sanitize_sidebar().
+
 Version 1.0.0.2 (11/10/2014)
 - Removed template-blog.php as it is not required.
 - Added esc_html() to altitude_home_button_text.

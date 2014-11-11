@@ -401,7 +401,8 @@ Altitude Lite is based on Underscores http://underscores.me/, (C) 2012-2014 Auto
 		position: relative;
 	}
 
-	#main_navigation_container #site_navigation .menu > li.menu-item-has-children {
+	#main_navigation_container #site_navigation .menu  li.menu-item-has-children,
+	#main_navigation_container #site_navigation .menu  li.page_item_has_children {
 		background: url("images/bottom_arrow.png") right 12px no-repeat;
 		padding-right: 20px;
 	}
@@ -1085,4 +1086,19 @@ Altitude Lite is based on Underscores http://underscores.me/, (C) 2012-2014 Auto
 
 #menu_button.genericon-menu:before {
 	content: '\f419';
+}
+
+/****************** Default Page Menu ****************/
+.children {
+	display: none;
+	position: absolute;
+	background-color: #000;
+	margin-left: 30px !important;
+}
+.page_item_has_children:hover > .children {
+	display: block;
+}
+.children li {
+    display: block !important;
+    margin: 0 15px !important;
 }

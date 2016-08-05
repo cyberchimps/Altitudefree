@@ -1,5 +1,8 @@
 Altitude Lite
 
+Version 1.0.0.5 (08/05/2016)
+- Updated as per latest Theme Check guidelines
+
 Version 1.0.0.4 (11/11/2014)
 - Tweaked style for default/fallback menu.
 

@@ -1102,3 +1102,10 @@ Altitude Lite is based on Underscores http://underscores.me/, (C) 2012-2014 Auto
     display: block !important;
     margin: 0 15px !important;
 }
+.error404 .page-content p:first-child{
+	text-align: center;
+}
+.error404 .page-content .search-form{
+ padding-bottom: 8%;
+    text-align: center;
+}

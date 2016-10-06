@@ -1,5 +1,8 @@
 Altitude Lite
 
+Version 1.1 (10/06/2016)
+- Fixed text alignment issue of 404 page.
+
 Version 1.0.0.5 (08/05/2016)
 - Updated as per latest Theme Check guidelines
 

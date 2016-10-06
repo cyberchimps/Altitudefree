@@ -1109,3 +1109,17 @@ Altitude Lite is based on Underscores http://underscores.me/, (C) 2012-2014 Auto
  padding-bottom: 8%;
     text-align: center;
 }
+
+@media screen and (min-width: 768px) and (max-width:800px){
+#main .s-col-9, #main .s-col-3 {
+	
+	width:100%;
+}
+#main #secondary{
+text-align:center;
+}
+
+#wp-calendar{
+	margin: 0 auto;
+}
+}

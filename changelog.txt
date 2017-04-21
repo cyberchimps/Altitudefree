@@ -1,4 +1,8 @@
 Altitude Lite
+**************
+
+Version 1.2 (04/21/2017)
+- Fixed issue with PHP version 7.1
 
 Version 1.1 (10/06/2016)
 - Fixed text alignment issue of 404 page.

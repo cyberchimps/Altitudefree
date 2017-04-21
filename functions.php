@@ -243,7 +243,11 @@ function my_admin_notice(){
 	$altitude_check_screen = get_admin_page_title();
  
    if ( $altitude_check_screen == 'Manage Themes' )
+{
           echo '<div class="notice notice-info"><p class="altitude-upgrade-callout" style="font-size:1.2em; font-weight:bold;"><img src="'.get_template_directory_uri().'/images/chimp.png" alt="CyberChimps" style="padding-right:1em; vertical-align:middle"/>Welcome to Altitude Lite! Get 30% off on <a href="https://cyberchimps.com/store/altitude/" target="_blank" title="Altitude">Altitude</a> using Coupon Code <span style="color:red">ALTITUDE30</span></p></div>';
+
+          echo '<div class="notice notice-info is-dismissible"><p class="altitude-upgrade-callout" style="font-size:18px; "><a href="https://cyberchimps.com/free-download-50-stock-images-use-please/?utm_source=AltitudeLite" target="_blank" style="text-decoration:none;">FREE - Download CyberChimps\' Pack of 50 High-Resolution Stock Images Now</a></p></div>';
+}
 }
 
 // enabling theme support for title tag

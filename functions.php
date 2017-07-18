@@ -17,6 +17,8 @@
 
 $template_directory = get_template_directory();
 
+require( get_template_directory() . '/inc/admin-about.php' );
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -241,7 +243,7 @@ add_action( 'admin_notices', 'my_admin_notice' );
 function my_admin_notice(){
 	global $altitude_check_screen;
 	$altitude_check_screen = get_admin_page_title();
- 
+
    if ( $altitude_check_screen == 'Manage Themes' )
 {
           echo '<div class="notice notice-info"><p class="altitude-upgrade-callout" style="font-size:1.2em; font-weight:bold;"><img src="'.get_template_directory_uri().'/images/chimp.png" alt="CyberChimps" style="padding-right:1em; vertical-align:middle"/>Welcome to Altitude Lite! Get 30% off on <a href="https://cyberchimps.com/store/altitude/" target="_blank" title="Altitude">Altitude</a> using Coupon Code <span style="color:red">ALTITUDE30</span></p></div>';
@@ -251,8 +253,92 @@ function my_admin_notice(){
 }
 
 // enabling theme support for title tag
-function altitudelite_title_setup() 
+function altitudelite_title_setup()
 {
 	add_theme_support( 'title-tag' );
 }
 add_action( 'after_setup_theme', 'altitudelite_title_setup' );
+
+
+function altitude_lite_customize_edit_links( $wp_customize ) {
+
+
+   $wp_customize->selective_refresh->add_partial( 'blogname', array(
+'selector' => '.site-title'
+) );
+
+	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+		'selector' => '.site-description'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'altitude_logo_image', array(
+		'selector' => '#site_logo a'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'nav_menu_locations[footer]', array(
+		'selector' => '#footer_menu_container'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'altitude_copyright_textbox', array(
+		'selector' => '#copyright_text'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'nav_menu_locations[primary]', array(
+		'selector' => '#navigation .nav'
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'header_image', array(
+		'selector' => '#site_branding_container'
+	) );
+
+}
+add_action( 'customize_register', 'altitude_lite_customize_edit_links' );
+add_theme_support( 'customize-selective-refresh-widgets' );
+
+add_action( 'admin_notices', 'altitude_lite_admin_notice' );
+function altitude_lite_admin_notice(){
+
+	$admin_check_screen = get_admin_page_title();
+
+	if( !class_exists('SlideDeckPlugin') )
+	{
+
+	$slug = 'slidedeck';
+	 if ( $admin_check_screen == 'Manage Themes' )
+	{
+		?>
+		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
+		<p>
+		 <a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the SlideDeck Lite plugin</a>
+		</p>
+		</div>
+		<?php
+	}
+	}
+
+	if( !class_exists('WPForms') )
+	{
+
+	$slug = 'wpforms-lite';
+	 if ( $admin_check_screen == 'Manage Themes' )
+	{
+		?>
+		<div class="notice notice-info is-dismissible" style="margin-top:15px;">
+		<p>
+		 <a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $slug ), 'install-plugin_' . $slug ); ?>">Install the WP Forms Lite plugin</a>
+		</p>
+		</div>
+		<?php
+	}
+	}
+
+	if ( $admin_check_screen == 'Manage Themes' )
+	{
+	?>
+		<div class="notice notice-success is-dismissible">
+				<b><p>Liked this theme? <a href="https://wordpress.org/support/theme/altitude-lite/reviews/#new-post" target="_blank">Leave us</a> a ***** rating. Thank you! </p></b>
+		</div>
+		<?php
+	}
+
+}

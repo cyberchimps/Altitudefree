@@ -260,7 +260,7 @@ function altitudelite_title_setup()
 add_action( 'after_setup_theme', 'altitudelite_title_setup' );
 
 
-function fine_customize_edit_links( $wp_customize ) {
+function altitude_lite_customize_edit_links( $wp_customize ) {
 
 
    $wp_customize->selective_refresh->add_partial( 'blogname', array(
@@ -292,7 +292,7 @@ function fine_customize_edit_links( $wp_customize ) {
 	) );
 
 }
-add_action( 'customize_register', 'fine_customize_edit_links' );
+add_action( 'customize_register', 'altitude_lite_customize_edit_links' );
 add_theme_support( 'customize-selective-refresh-widgets' );
 
 add_action( 'admin_notices', 'altitude_lite_admin_notice' );

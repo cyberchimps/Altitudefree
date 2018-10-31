@@ -40,8 +40,7 @@
 
 						<div id="site_logo" class="xs-col-12 s-col-2">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel="home">
-								<img src='<?php echo esc_url( get_theme_mod( 'altitude_logo_image', get_template_directory_uri() . '/images/default_logo.png' ) ); ?>'
-									 alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+								<img src='<?php echo esc_url( get_theme_mod( 'altitude_logo_image' ) ); ?>'>
 							</a>
 						</div>
 						<!-- #site-logo -->

@@ -47,28 +47,29 @@ if ( ! function_exists( 'altitude_header_style' ) ) :
 		$header_text_color = get_header_textcolor();
 
 		// If no custom options for text are set, let's bail
-		// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
-		if ( HEADER_TEXTCOLOR != $header_text_color ) :
+		// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value.
+		if ( get_theme_support( 'custom-header', 'default-text-color' ) !== $header_text_color ) :
 
 			// If we get this far, we have custom styles. Let's do this.
 			?>
 			<style type="text/css">
 				<?php
 					// Has the text been hidden?
-					if ( 'blank' == $header_text_color ) :
-				?>
+				if ( 'blank' === $header_text_color ) :
+					?>
 				#site_branding_container .site-title,
 				#site_branding_container .site-description {
-					visibility: hidden;
+					position: absolute;
+					clip: rect(1px, 1px, 1px, 1px);
 				}
 
-				<?php
-					// If the user has set a custom color for the text use that
+					<?php
+					// If the user has set a custom color for the text use that.
 					else :
-				?>
-				#site_branding_container .site-title a,
+						?>
+				#site_branding_container .site-title,
 				#site_branding_container .site-description {
-					color: #<?php echo $header_text_color; ?>;
+					color: #<?php echo esc_attr( $header_text_color ); ?>;
 				}
 
 				<?php endif; ?>
@@ -85,28 +86,22 @@ if ( ! function_exists( 'altitude_header_style' ) ) :
 				background-repeat: no-repeat;
 			}
 		</style>
-		
-		<?php if ( HEADER_IMAGE != $header_image && $header_image != false ) : ?>
+
+		<?php if ( $header_image ) : ?>
 
 			<style type="text/css">
 				#masthead-inner {
-					background-image: url( <?php echo $header_image ?> );
+					background-image: url( <?php echo esc_url( $header_image ); ?> );
 				}
 			</style>
 
-		<?php else : ?>
+			<?php
+		endif;
 
-			<style type="text/css">
-				#masthead-inner {
-					background-image: url( <?php echo HEADER_IMAGE ?> );
-				}
-			</style>
+	return;
 
-		<?php endif;
-
-		return;
 	}
-endif; // altitude_header_style
+endif; // altitude_header_style.
 
 if ( ! function_exists( 'altitude_admin_header_style' ) ) :
 	/**

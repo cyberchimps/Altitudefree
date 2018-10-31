@@ -28,7 +28,7 @@ function altitude_customize_register( $wp_customize ) {
 		'title'    => __( 'Theme Options', 'altitude' ),
 		'priority' => 30
 	) );
-	
+
 	// Sidebar Location
 	$wp_customize->add_setting( 'altitude_sidebar', array(
 		'default'   => 'right',
@@ -53,7 +53,6 @@ function altitude_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'altitude_logo_image', array(
-		'default'  => get_template_directory_uri() . '/images/default_logo.png',
 		'sanitize_callback'	=> 'altitude_sanitize_logo'
 	) );
 

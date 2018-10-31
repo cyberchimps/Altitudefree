@@ -1,5 +1,8 @@
 Altitude Lite
 **************
+Version 1.4 (10/31/2018)
+- Fixed custom header issue
+
 Version 1.3 (07/18/2017)
 - Added visible edit links in the customizer preview
 

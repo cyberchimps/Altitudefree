@@ -25,14 +25,14 @@
 			<?php the_content(); ?>
 			<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'altitude' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'altitude-lite' ),
 				'after'  => '</div>',
 			) );
 			?>
 		</div><!-- .post-content -->
 
 		<footer class="post-footer">
-			<?php edit_post_link( __( 'Edit', 'altitude' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'altitude-lite' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .post-footer -->
 
 	</div><!-- article-container -->

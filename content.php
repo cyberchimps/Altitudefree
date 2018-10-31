@@ -29,7 +29,7 @@
 		</div><!-- .entry-summary -->
 
 		<footer class="entry-footer">
-			<div class="entry-edit"><?php edit_post_link( __( 'Edit', 'altitude' ), '<span class="edit-link">', '</span>' ); ?></div>
+			<div class="entry-edit"><?php edit_post_link( __( 'Edit', 'altitude-lite' ), '<span class="edit-link">', '</span>' ); ?></div>
 		</footer><!-- .entry-footer -->
 
 	</div><!-- article-container -->

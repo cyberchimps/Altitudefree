@@ -28,7 +28,7 @@
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'altitude' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'altitude-lite' ),
 					'after'  => '</div>',
 				) );
 			?>
@@ -39,8 +39,8 @@
 				<div class="entry-meta row clear">
 					<?php
 					/* translators: used between list items, there is a space after the comma */
-					$categories_list = get_the_category_list( __( ', ', 'altitude' ) );
-					$tags_list = get_the_tag_list( '', __( ', ', 'altitude' ) );
+					$categories_list = get_the_category_list( __( ', ', 'altitude-lite' ) );
+					$tags_list = get_the_tag_list( '', __( ', ', 'altitude-lite' ) );
 					$meta_class = ($tags_list) ? 'm-col-4' : 'xs-col-6';
 					if( $categories_list && altitude_categorized_blog() ) :
 						?>
@@ -59,7 +59,7 @@
 						</div>
 					<?php endif; // End if $tags_list ?>
 					<div class="footer-meta post-edit <?php echo $meta_class; ?>">
-						<?php edit_post_link( __( 'Edit', 'altitude' ), '<span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( __( 'Edit', 'altitude-lite' ), '<span class="edit-link">', '</span>' ); ?>
 					</div>
 				</div><!-- .entry-meta -->
 			</div>

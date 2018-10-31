@@ -301,21 +301,21 @@ if ( ! function_exists( 'altitude_admin_header_image' ) ) :
 						<ul class="social-icons">
 							<?php if ( '' != get_theme_mod( 'jetpack-twitter' ) ): ?>
 								<li class="altitude-twitter">
-									<a href="<?php echo esc_url( get_theme_mod( 'jetpack-twitter' ) ); ?>" title="<?php _e( 'Twitter', 'altitude' ); ?>">
+									<a href="<?php echo esc_url( get_theme_mod( 'jetpack-twitter' ) ); ?>" title="<?php _e( 'Twitter', 'altitude-lite' ); ?>">
 										<i class="fa fa-twitter"></i>
 									</a>
 								</li>
 							<?php endif; ?>
 							<?php if ( '' != get_theme_mod( 'jetpack-facebook' ) ): ?>
 								<li class="altitude-facebook">
-									<a href="<?php echo esc_url( get_theme_mod( 'jetpack-facebook' ) ); ?>" title="<?php _e( 'Facebook', 'altitude' ); ?>">
+									<a href="<?php echo esc_url( get_theme_mod( 'jetpack-facebook' ) ); ?>" title="<?php _e( 'Facebook', 'altitude-lite' ); ?>">
 										<i class="fa fa-facebook"></i>
 									</a>
 								</li>
 							<?php endif; ?>
 							<?php if ( '' != get_theme_mod( 'jetpack-google_plus' ) ): ?>
 								<li class="altitude-google-plus">
-									<a href="<?php echo esc_url( get_theme_mod( 'jetpack-google_plus' ) ); ?>" title="<?php _e( 'Google Plus', 'altitude' ); ?>">
+									<a href="<?php echo esc_url( get_theme_mod( 'jetpack-google_plus' ) ); ?>" title="<?php _e( 'Google Plus', 'altitude-lite' ); ?>">
 										<i class="fa fa-google-plus"></i>
 									</a>
 								</li>

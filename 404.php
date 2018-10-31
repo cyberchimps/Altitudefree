@@ -21,13 +21,13 @@ get_header(); ?>
 			<section class="not-found">
 				<div class="row">
 					<header class="page-header">
-						<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'altitude' ); ?></h1>
+						<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'altitude-lite' ); ?></h1>
 					</header><!-- .page-header -->
 				</div>
 
 				<div class="row">
 					<div class="page-content">
-						<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'altitude' ); ?></p>
+						<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'altitude-lite' ); ?></p>
 
 						<div class="row">
 							<div class="xs-col-12">
@@ -48,7 +48,7 @@ get_header(); ?>
 							<div class="xs-col-12 s-col-3">
 								<?php if ( altitude_categorized_blog() ) : // Only show the widget if site has categories. ?>
 									<div class="widget widget_categories">
-										<h3 class="widget-title"><?php _e( 'Most Used Categories', 'altitude' ); ?></h3>
+										<h3 class="widget-title"><?php _e( 'Most Used Categories', 'altitude-lite' ); ?></h3>
 										<ul>
 											<?php
 											wp_list_categories( array(

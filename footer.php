@@ -29,11 +29,11 @@
 
 				<div class="xs-col-12">
 					<div id="copyright_text">
-						<?php _e('Copyright', 'altitude'); ?> &copy; <?php date('Y'); ?>
+						<?php _e('Copyright', 'altitude-lite'); ?> &copy; <?php date('Y'); ?>
 						<span class="sep"> &middot; </span>
-						<?php echo wp_kses_post( get_theme_mod( 'altitude_copyright_textbox', sprintf( __( 'A mobile first theme designed by %1$s', 'altitude' ), '<a href="http://cyberchimps.com/" rel="designer">CyberChimps Themes</a>' ) ) ); ?>
+						<?php echo wp_kses_post( get_theme_mod( 'altitude_copyright_textbox', sprintf( __( 'A mobile first theme designed by %1$s', 'altitude-lite' ), '<a href="http://cyberchimps.com/" rel="designer">CyberChimps Themes</a>' ) ) ); ?>
 						<span class="sep"> &middot; </span>
-						<?php _e('All Rights Reserved', 'altitude'); ?>
+						<?php _e('All Rights Reserved', 'altitude-lite'); ?>
 					</div>
 				</div>
 

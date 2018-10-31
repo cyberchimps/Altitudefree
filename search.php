@@ -21,7 +21,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'altitude' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'altitude-lite' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				<hr class="s-divider" />
 			</header><!-- .page-header -->
 

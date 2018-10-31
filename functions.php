@@ -39,9 +39,9 @@ if ( ! function_exists( 'altitude_setup' ) ) : /**
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Altitude, use a find and replace
-		 * to change 'altitude' to the name of your theme in all the template files
+		 * to change 'altitude-lite' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'altitude', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'altitude-lite', get_template_directory() . '/languages' );
 
 		/**
 		 * Add default posts and comments RSS feed links to head
@@ -59,8 +59,8 @@ if ( ! function_exists( 'altitude_setup' ) ) : /**
 		 * This theme uses wp_nav_menu() in one location.
 		 */
 		register_nav_menus( array(
-			                    'primary' => __( 'Primary Menu', 'altitude' ),
-			                    'footer'  => __( 'Footer Menu', 'altitude' )
+			                    'primary' => __( 'Primary Menu', 'altitude-lite' ),
+			                    'footer'  => __( 'Footer Menu', 'altitude-lite' )
 		                    ) );
 
 		/**
@@ -102,7 +102,7 @@ add_action( 'after_setup_theme', 'altitude_setup' );
  */
 function altitude_widgets_init() {
 	register_sidebar( array(
-		                  'name'          => __( 'Sidebar', 'altitude' ),
+		                  'name'          => __( 'Sidebar', 'altitude-lite' ),
 		                  'id'            => 'sidebar-1',
 		                  'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		                  'after_widget'  => '</aside>',
@@ -223,7 +223,7 @@ function altitude_google_font_url() {
 	 * Translators: If there are characters in your language that are not supported
 	 * by Source Sans Pro or font awesome, translate this to 'off'. Do not translate into your own language.
 	 */
-	if ( 'off' !== _x( 'on', 'source sans pro font: on or off', 'altitude' ) ) {
+	if ( 'off' !== _x( 'on', 'source sans pro font: on or off', 'altitude-lite' ) ) {
 		$font_url = add_query_arg( 'family', 'Source+Sans+Pro:200,300,400,600,700,900', "//fonts.googleapis.com/css" );
 	}
 
@@ -234,7 +234,7 @@ function altitude_google_font_url() {
  * Customize excerpt more
  */
 function altitude_excerpt_more( $more ) {
-	return '... <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Continue Reading', 'altitude' ) . '</a>';
+	return '... <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Continue Reading', 'altitude-lite' ) . '</a>';
 }
 
 add_filter( 'excerpt_more', 'altitude_excerpt_more' );

@@ -41,17 +41,17 @@ if ( !function_exists( 'altitude_content_nav' ) ) :
 		?>
 		<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?> row">
 			<div class="xs-col-12">
-				<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'altitude' ); ?></h2>
+				<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'altitude-lite' ); ?></h2>
 
 				<?php if ( is_single() ) : // navigation links for single posts ?>
 
-					<div class="nav-previous xs-col-6"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'altitude' ) . '</span> %title' ); ?></div>
-					<div class="nav-next xs-col-6"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'altitude' ) . '</span>' ); ?></div>
+					<div class="nav-previous xs-col-6"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'altitude-lite' ) . '</span> %title' ); ?></div>
+					<div class="nav-next xs-col-6"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'altitude-lite' ) . '</span>' ); ?></div>
 
 				<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
-					<div class="nav-previous xs-col-6"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Previous Posts', 'altitude' ) ); ?></div>
-					<div class="nav-next xs-col-6"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'altitude' ) ); ?></div>
+					<div class="nav-previous xs-col-6"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Previous Posts', 'altitude-lite' ) ); ?></div>
+					<div class="nav-next xs-col-6"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'altitude-lite' ) ); ?></div>
 
 				<?php endif; ?>
 			</div>
@@ -81,15 +81,15 @@ endif;
  */
 function altitude_comment_meta () {
 	$comments = get_comments_number();
-	$comment  = sprintf( __( '%s Comments', 'altitude' ),
+	$comment  = sprintf( __( '%s Comments', 'altitude-lite' ),
 		$comments
 	);
 	if ( !post_password_required() && ( comments_open() && 0 != $comments ) ) {
 		printf( '%2$s<span class="comments-link"><a href="%3$s" title="%4$s">%1$s</a></span>',
-			( $comments > 1 ) ? $comment : __( '1 Comment', 'altitude' ),
+			( $comments > 1 ) ? $comment : __( '1 Comment', 'altitude-lite' ),
 			altitude_get_meta_image( 'comment' ),
 			get_comments_link(),
-			sprintf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comments, 'comments title', 'altitude' ),
+			sprintf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comments, 'comments title', 'altitude-lite' ),
 				number_format_i18n( get_comments_number() ), get_the_title() )
 		);
 	}

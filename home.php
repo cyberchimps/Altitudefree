@@ -22,7 +22,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php _e('Blog', 'altitude'); ?></h1>
+					<h1 class="page-title"><?php _e('Blog', 'altitude-lite'); ?></h1>
 					<hr class="s-divider" />
 				</header><!-- .page-header -->
 
